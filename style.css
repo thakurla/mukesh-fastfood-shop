@@ -1,0 +1,150 @@
+/* ===== Google Font Import ===== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+/* ===== Base Theme ===== */
+.stApp {
+    background: #faf6f0;
+    color: #2b1f1d;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* ===== Typography ===== */
+h1 {
+    color: #d84315 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+}
+
+h2, h3, h4 {
+    color: #872808 !important;
+    font-weight: 700 !important;
+}
+
+/* ===== Sidebar ===== */
+[data-testid="stSidebar"] {
+    background: #ffffff;
+    border-right: 1px solid #f0e2d5;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: #f2e3d5;
+}
+
+/* Radio button styling in sidebar */
+[data-testid="stSidebar"] .stRadio label {
+    font-weight: 600;
+    color: #4a342e;
+}
+
+/* ===== Food Item Cards ===== */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: #ffffff;
+    border: 1px solid #fae8d8;
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 4px 18px rgba(184, 91, 53, 0.06);
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(184, 91, 53, 0.12);
+    border-color: #ffd8bf;
+}
+
+/* ===== Food Images (Fixed Aspect Ratio) ===== */
+[data-testid="stImage"] img {
+    width: 100%;
+    height: 185px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Primary Action Buttons (Add to Cart / WhatsApp) ===== */
+.stButton > button,
+.stLinkButton > a {
+    background: linear-gradient(135deg, #ff6b35, #e03800) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    padding: 10px 18px !important;
+    box-shadow: 0 4px 12px rgba(224, 56, 0, 0.24);
+    transition: all 0.2s ease !important;
+}
+
+.stButton > button:hover,
+.stLinkButton > a:hover {
+    background: linear-gradient(135deg, #e03800, #b72800) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(224, 56, 0, 0.35);
+}
+
+.stButton > button:active,
+.stLinkButton > a:active {
+    transform: translateY(0);
+}
+
+/* Disabled button state (Shop Closed) */
+.stButton > button:disabled {
+    background: #d6cbbf !important;
+    color: #7d7065 !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    cursor: not-allowed;
+}
+
+/* ===== Input Fields ===== */
+.stTextInput input,
+.stTextArea textarea,
+.stNumberInput input {
+    background: #ffffff !important;
+    color: #2b1f1d !important;
+    border: 1.5px solid #ebd9c8 !important;
+    border-radius: 10px !important;
+    font-weight: 600;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus,
+.stNumberInput input:focus {
+    border-color: #ff6b35 !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15) !important;
+}
+
+/* Number input stepper buttons */
+[data-testid="stNumberInputStepDown"],
+[data-testid="stNumberInputStepUp"] {
+    background: #fdf5ee !important;
+    border-color: #ebd9c8 !important;
+    border-radius: 6px !important;
+}
+
+/* ===== Alerts / Banners ===== */
+div[data-testid="stAlert"] {
+    border-radius: 14px;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== Dividers ===== */
+hr {
+    border: none;
+    height: 1px;
+    background: #edd8c5;
+    margin: 20px 0;
+}
+
+/* ===== Clean Footer & Header Branding ===== */
+footer {
+    display: none !important;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
